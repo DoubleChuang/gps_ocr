@@ -1,3 +1,31 @@
+# GPS OCR
+
+Detect video frame that has GPS information record by [E3V device(GPS ver)](http://www.grenzel.com/ch/products6-2.html), and save it into a .gpx file
+
+## How to use
+
+Copy the E3V video into current directory
+
+
+```
+docker run -it --rm \
+    -v $PWD:/tmp1 
+    -w /tmp1 \
+    doublehub/gps_ocr:latest \
+        -i ${YOUR_E3V_VIDEO_FILE}
+```
+
+Example:
+```
+docker run -it --rm \
+    -v $PWD:/tmp1 
+    -w /tmp1 \
+    doublehub/gps_ocr:latest \
+        -i ./examples/20220624223651_000060B.MP4
+```
+
+The following are to be deleted
+---
 ## installation
 https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.5/doc/doc_en/quickstart_en.md#1-installation
 
