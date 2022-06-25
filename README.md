@@ -1,11 +1,9 @@
 # GPS OCR
 
-Detect video frame that has GPS information record by [E3V device(GPS ver)](http://www.grenzel.com/ch/products6-2.html), and save it into a .gpx file
-
+Detect video frames captured by [E3V device(GPS ver)](http://www.grenzel.com/ch/products6-2.html) containing GPS information and save it into a .gpx file
 ## How to use
 
 Copy the E3V video into current directory, and then run following
-
 
 ```
 docker run -it --rm \
