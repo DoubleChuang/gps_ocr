@@ -4,7 +4,7 @@ Detect video frame that has GPS information record by [E3V device(GPS ver)](http
 
 ## How to use
 
-Copy the E3V video into current directory
+Copy the E3V video into current directory, and then run following
 
 
 ```
