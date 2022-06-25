@@ -40,11 +40,20 @@ paddleocr --image_dir ./images/1.png --det false --lang en
 docker run --name ppocr -v $PWD:/paddle --network=host -it   paddlepaddle/paddle:2.3.0  /bin/bash
 
 pip install "paddleocr>=2.0.1"
+pip install gpxpy==1.5.0
 pip3 install -U https://paddleocr.bj.bcebos.com/whl/layoutparser-0.0.0-py3-none-any.whl
+pip install pydantic
+pip install loguru
 wget https://github.com/Halfish/lstm-ctc-ocr/raw/master/fonts/simfang.ttf
+
 ```
 
+build
+```
+docker build -t gps_ocr ./dockerfiles/cpu.dockerfile
 
+docker run  -it --rm --name gps_ocr -v $PWD:/tmp1 -w /tmp1 gps_ocr
+```
 
 ## X11 windows with Docekr on Mac
 
@@ -62,3 +71,6 @@ ref:
 
 Running GUI programs in Docker on macOS
     https://github.com/hybridgroup/gocv#running-gui-programs-in-docker-on-macos
+
+## References
+[opencv capture](https://medium.com/ching-i/python-opencv-%E8%AE%80%E5%8F%96%E9%A1%AF%E7%A4%BA%E5%8F%8A%E5%84%B2%E5%AD%98%E5%BD%B1%E5%83%8F-%E5%BD%B1%E7%89%87-ee3701c454da)
